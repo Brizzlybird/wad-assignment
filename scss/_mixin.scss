@@ -11,6 +11,13 @@
   flex-flow: row wrap;
 }
 
+@mixin grid-item($flex) {
+  flex: $flex;
+  -webkit-flex: $flex;
+  -moz-flex: $flex;
+  -ms-flex: $flex;
+}
+
 @mixin comic-info-size($size) {
   width: $size;
 }

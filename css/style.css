@@ -46,6 +46,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/*****
+COLORS
+*****/
+/*****
+PADDING
+*****/
 * {
   box-sizing: border-box; }
 
@@ -54,15 +60,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: #333; }
 
-h2 {
-  font-size: 1.5em; }
-
-.headline {
-  background-color: #410D7D;
-  color: #fff;
-  font-weight: 200;
-  padding: 2em;
-  text-align: center; }
+a {
+  text-decoration: none; }
 
 .page-head {
   background-color: #ccc;
@@ -71,10 +70,28 @@ h2 {
   background-size: 100%; }
   .page-head h1.site-title {
     color: #fff;
-    font-size: 5em;
+    font-size: 2em;
     padding: 1em;
     text-align: center; }
 
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1em; }
+
+.headline {
+  background-color: #410D7D;
+  color: #fff;
+  font-weight: 200;
+  padding: 2em;
+  text-align: center; }
+
+.sub-headline {
+  padding-top: 0.5em;
+  text-align: center; }
+
+/* HOMEPAGE */
 .container {
   display: flex;
   display: -webkit-flex;
@@ -84,11 +101,76 @@ h2 {
   -webkit-justify-content: space-around;
   flex-flow: row wrap; }
   .container .comic-info {
-    width: 80%;
+    flex: 1 90%;
+    -webkit-flex: 1 90%;
+    -moz-flex: 1 90%;
+    -ms-flex: 1 90%;
     margin: 0 auto;
-    padding: 2em; }
+    padding: 1em; }
+    .container .comic-info h2 {
+      font-size: 1em;
+      color: #fff;
+      padding: 2em; }
+    .container .comic-info h2.even {
+      background-color: #410D7D; }
+    .container .comic-info h2.odd {
+      background-color: #1D9600; }
+    .container .comic-info p {
+      padding: 1em; }
+
+/* ARTICLE PAGES */
+.container .synopsis {
+  flex: 1 66%;
+  -webkit-flex: 1 66%;
+  -moz-flex: 1 66%;
+  -ms-flex: 1 66%;
+  padding: 1em; }
+.container .image {
+  flex: 1 33%;
+  -webkit-flex: 1 33%;
+  -moz-flex: 1 33%;
+  -ms-flex: 1 33%;
+  padding: 1em; }
+  .container .image img {
+    width: 100%;
+    overflow: hidden; }
 
 .page-foot {
   background-color: #34ACFF; }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .page-head .icon {
+    display: none; }
+  .page-head h1.site-title {
+    font-size: 3em; }
+
+  .container {
+    width: 90%;
+    margin: 0 auto; }
+    .container .comic-info {
+      flex: 2 50%;
+      -webkit-flex: 2 50%;
+      -moz-flex: 2 50%;
+      -ms-flex: 2 50%; }
+      .container .comic-info h2 {
+        font-size: 2em;
+        padding: 1em; } }
+@media screen and (min-width: 1024px) {
+  .page-head .icon {
+    display: none; }
+  .page-head h1.site-title {
+    font-size: 4em; }
+
+  .container {
+    width: 80%;
+    margin: 0 auto; }
+    .container .comic-info {
+      flex: 3 33%;
+      -webkit-flex: 3 33%;
+      -moz-flex: 3 33%;
+      -ms-flex: 3 33%; }
+      .container .comic-info h2 {
+        font-size: 2em;
+        padding: 1em; } }
 
 /*# sourceMappingURL=style.css.map */
