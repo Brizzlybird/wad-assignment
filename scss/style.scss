@@ -1,0 +1,54 @@
+@import 'reset';
+@import 'mixin';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400');
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Sitewide */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+.headline {
+  background-color: #410D7D;
+  color: #fff;
+  font-weight: 200;
+  padding: 2em;
+  text-align: center;
+}
+
+.page-head {
+  background-color: #ccc;
+  background-image: url("../img/comics.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  h1.site-title {
+    color: #fff;
+    font-size: 5em;
+    padding: 1em;
+    text-align: center;
+  }
+}
+
+.container {
+  @include grid-display();
+  @include grid-flow();
+  .comic-info {
+    @include comic-info-size(80%);
+    margin: 0 auto;
+    padding: 2em;
+  }
+}
+
+.page-foot {
+  background-color: #34ACFF;
+}

@@ -1,0 +1,16 @@
+@mixin grid-display() {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+}
+
+@mixin grid-flow() {
+  flex-flow: row wrap;
+}
+
+@mixin comic-info-size($size) {
+  width: $size;
+}
